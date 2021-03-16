@@ -59,7 +59,7 @@ resource "tfe_policy_set" "production" {
     #"${tfe_sentinel_policy.prod-change-window-hours.id}",
   ]
 
-  workspace_external_ids = [
+  workspace_ids = [
     "${local.workspaces["ExampleTeam-production"]}",
   ]
 }
@@ -74,7 +74,7 @@ resource "tfe_policy_set" "development" {
     "${tfe_sentinel_policy.allowed-working-hours.id}",
   ]
 
-  workspace_external_ids = [
+  workspace_ids = [
     "${local.workspaces["ExampleTeam-development"]}",
   ]
 }
@@ -88,7 +88,7 @@ resource "tfe_policy_set" "staging" {
     "${tfe_sentinel_policy.aws-restrict-instance-type-stage.id}",
   ]
 
-  workspace_external_ids = [
+  workspace_ids = [
     "${local.workspaces["ExampleTeam-staging"]}",
   ]
 }
@@ -102,7 +102,7 @@ resource "tfe_policy_set" "sentinel" {
     "${tfe_sentinel_policy.tfe_policies_only.id}",
   ]
 
-  workspace_external_ids = [
+  workspace_ids = [
     "${local.workspaces["ExampleSecurityTeam"]}",
   ]
 }
