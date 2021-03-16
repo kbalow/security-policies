@@ -103,7 +103,7 @@ resource "tfe_policy_set" "sentinel" {
   ]
 
   workspace_ids = [
-    "${local.workspaces["ExampleSecurityTeam"]}",
+    "${local.workspaces["InitechSecurity"]}",
   ]
 }
 
