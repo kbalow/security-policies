@@ -60,7 +60,7 @@ resource "tfe_policy_set" "production" {
   ]
 
   workspace_ids = [
-    "${local.workspaces["ExampleTeam-production"]}",
+    "${local.workspaces["Initech-production"]}",
   ]
 }
 
@@ -75,7 +75,7 @@ resource "tfe_policy_set" "development" {
   ]
 
   workspace_ids = [
-    "${local.workspaces["ExampleTeam-development"]}",
+    "${local.workspaces["Initech-development"]}",
   ]
 }
 
@@ -89,7 +89,7 @@ resource "tfe_policy_set" "staging" {
   ]
 
   workspace_ids = [
-    "${local.workspaces["ExampleTeam-staging"]}",
+    "${local.workspaces["Initech-staging"]}",
   ]
 }
 
