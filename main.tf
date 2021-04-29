@@ -29,7 +29,7 @@ data "tfe_workspace_ids" "all" {
 }
 
 locals {
-  workspaces = "${data.tfe_workspace_ids.all.external_ids}" # map of names to IDs
+  workspaces = "${data.tfe_workspace_ids.all.ids}" # map of names to IDs
 }
 
 resource "tfe_policy_set" "global" {
